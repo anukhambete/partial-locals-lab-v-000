@@ -25,6 +25,11 @@ class StudentsController < ApplicationController
     #binding.pry
     @students = Student.all
     @search = Student.search(params[:term]) unless params[:term] == nil
+    if params[:term] == nil
+      @search = Student.all
+    else
+      @search = Student.search(params[:term])
+    end
   end
 
   def student_params
