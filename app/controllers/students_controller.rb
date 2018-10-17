@@ -23,7 +23,7 @@ class StudentsController < ApplicationController
 
   def index
 
-    @students = Student.all
+    #@students = Student.all
     #@search = Student.search(params[:term]) unless params[:term] == nil
     if params[:term] == nil
       @search = Student.all
