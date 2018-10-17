@@ -30,6 +30,7 @@ class StudentsController < ApplicationController
     else
       @search = Student.search(params[:term])
     end
+    @search
     #binding.pry
   end
 
