@@ -24,6 +24,7 @@ class StudentsController < ApplicationController
   def index
     binding.pry
     @students = Student.all
+    @search = Student.search(params[:term])
   end
 
   def student_params
