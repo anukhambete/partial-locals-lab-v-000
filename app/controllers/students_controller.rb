@@ -28,7 +28,7 @@ class StudentsController < ApplicationController
     if params[:term] == nil
       @students = Student.all
     else
-      @search = Student.search(params[:term])
+      @students = Student.search(params[:term])
     end
     #@search
     #binding.pry
